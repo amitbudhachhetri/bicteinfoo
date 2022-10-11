@@ -17,6 +17,8 @@ include 'header.php';
                         <th>Teacher Name</th>
                         <th>Email</th>
                         <th>Address</th>
+                        <!-- <th>Edit</th> -->
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,6 +33,8 @@ include 'header.php';
                 <td><?php echo $row['name'];?></td>
                 <td><?php echo $row['email'];?></td>
                 <td><?php echo $row['address'];?></td>
+                <!-- <td><a href="edit_teacher.php?id=<?//=$row['id'] ?>">edit</a></td> -->
+                <td><a href="delete_teacher.php?id=<?=$row['id'] ?>">delete</a></td>
             </tr>
                     <?php } ?>
 

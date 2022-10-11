@@ -17,6 +17,7 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher</title>
     <link rel="stylesheet" href="../assets/css/dash.css">
+    <link rel="stylesheet" href="../assets/plugins/select2/select2.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
@@ -33,9 +34,9 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
 
                 <!-- Can hide (optional) this for Students and show for the teachers from permissions -->
                 
-                <li class="active">
-                    <a href="index.php"><i class='fa fa-user'></i>
-                        Students</a>
+                <li class>
+                    <a href="index.php"><i class='fa fa-user'aria-hidden="true"></i>
+                        Dashboard</a>
                 </li>
 
                 
@@ -62,9 +63,6 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
                 </li>
 
                 <li>
-                    <a href="category_info.php"><i class='fa fa-folder-open'></i>Category</a>
-                </li>
-                <li>
                     <a href="logout.php"><i class='fa fa-power-off'></i>Logout</a>
                 </li>
 
@@ -79,7 +77,7 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
         <div class="top-space">
 
             <div class="search">
-                <i class='fa fa-search'></i> <input type="text">
+                <i class></i> 
             </div>
 
             <div class="user">
@@ -87,37 +85,6 @@ if(!isset($_SESSION['SESS_FIRST_NAME'])){
             </div>
         </div>
 
-        <?php
-        $result = $db->prepare("SELECT count(*) as total FROM student");
-				$result->execute();
-				for($i=0; $row = $result->fetch(); $i++){
-
-
-               ?>
-
-        <div class="dash-basic">
-            <div class="dash-card">
-                <h2><?php echo $row['total']; ?> </h2>
-                    <?php }?>
-                <p>Students</p>
-            </div>
-
-            <?php
-        $result = $db->prepare("SELECT count(*) as total FROM teacher");
-				$result->execute();
-				for($i=0; $row = $result->fetch(); $i++){
-
-
-               ?>
-            <div class="dash-card">
-                <h2><?php echo $row['total']; ?> </h2>
-                <?php }?>
-                <p>Teachers</p>
-            </div>
-
-            <div class="dash-card">
-                <h2>3</h2>
-                <p>Categories</p>
-            </div>
-        </div>
+        
+        
         

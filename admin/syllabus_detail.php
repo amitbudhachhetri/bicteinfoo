@@ -24,7 +24,7 @@
                         <b>Subject Name:</b><?php echo $row['s_name'];?> <br>
                         <b>Subject Code:</b> <?php echo $row['s_code'];?><br>
                         <b>Syllabus</b>  <a href="../uploads/syllabus/<?php echo $row['s_file'];?>">View</a> <br>
-                        <!-- <a target="_blank" href="edit_syllabus.php" class="red">Delete</a> -->
+                        <a href="delete_syllabus.php?id=<?php echo $row['id'];?>" class="red">Delete</a>
                     </li>
                     <?php } ?>
 

@@ -6,10 +6,47 @@ include "header.php";
 $current_session_id = session_id();
 ?>
 
+        <?php
+        $result = $db->prepare("SELECT count(*) as total FROM student");
+				$result->execute();
+				for($i=0; $row = $result->fetch(); $i++){
+
+
+               ?>
+
+        <div class="dash-basic">
+            <div class="dash-card">
+                <h2><?php echo $row['total']; ?> </h2>
+                    <?php }?>
+                <p>Students</p>
+            </div>
+
+            <?php
+        $result = $db->prepare("SELECT count(*) as total FROM teacher");
+				$result->execute();
+				for($i=0; $row = $result->fetch(); $i++){
+
+
+               ?>
+            <div class="dash-card">
+                <h2><?php echo $row['total']; ?> </h2>
+                <?php }?>
+                <p>Teachers</p>
+            </div>
+
+            <div class="dash-card">
+                <h2>3</h2>
+                <p>Categories</p>
+            </div>
+            
 <div class="table-my">
+        <div>
+            <center>
+            <h1 style="margin-top:7em;color:blue;">Welcome To Admin Dashboard</h1>
+            </center>
+            </div>
 
-
-<table>
+<!-- <table>
     <thead>
         <tr>
             <th>Students Name</th>
@@ -29,7 +66,7 @@ $current_session_id = session_id();
             </tr>
                     <?php } ?>
                 </tbody>
-</table>
+</table> -->
 
 </div>
 </section>

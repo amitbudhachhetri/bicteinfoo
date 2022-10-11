@@ -1,15 +1,6 @@
 <?php
-/**................................................................
- * @package efac v 1.0
- * @author Faith Awolu
- * Hillsofts Technology Ltd.
- * (hillsofts@gmail.com)
- * ................................................................
- */
 
-/* Database config 
-Please edit the database info to yours
-*/
+
 $db_host		= "localhost";
 $db_user		= "root";
 $db_pass		= "";
@@ -35,7 +26,7 @@ class App {
                             </div>';
         }
     }
-}
+    }
     function get($val){
        return @$_GET[$val];
     }

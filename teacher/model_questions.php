@@ -25,6 +25,7 @@ include "header.php";
                         <th>year</th>
                         <th>Title</th>
                         <th>View/Download</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,12 +37,12 @@ include "header.php";
                 ?> 
 
                     <tr>
-                        <td><?php echo $row['semester'];?></td>
-                        <td><?php echo $row['s_name'];?></td>
+                        <td><?php echo $row['sem_id'];?></td>
+                        <td><?php echo $row['sub_id'];?></td>
                         <td><?php echo $row['year'];?></td>
                         <td><?php echo $row['title'];?></td>
-                        <td><a href="uploads/question/<?php echo $row['file'];?>"><i class="fa fa-eye" aria-hidden="true"></i>Model
-                            </a></td>
+                        <td><a href="uploads/question/<?php echo $row['file'];?>"><i class="fa fa-eye" aria-hidden="true"></i>Model</a></td>
+                        <td><a href="delete_question.php?id=<?=$row['id'] ?>">Delete</td>
                     </tr> <?php } ?>
                 </tbody>
             </table>

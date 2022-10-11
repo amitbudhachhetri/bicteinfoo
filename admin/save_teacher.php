@@ -1,7 +1,7 @@
 <?php
 
 /* cause yeah yeah yeah 
-meet @amit budhachhetri in 
+@amit budhachhetri in 
 www.amitbudhachhetri.com.np
 */
 
@@ -14,15 +14,21 @@ $c = $_POST['username'];
 $d = $_POST['email'];
 $e = $_POST['password'];
 // query
+if($a !=null && $b!=null && $c !=null && $d !=null && $e !=null)
+  {
 
   //do your write to the database filename and other details   
-$sql = "INSERT INTO teacher (name,address,username,email,password) VALUES (:a,:b,:c ,:d,:e)";
-$q = $db->prepare($sql);
-$q->execute(array(':a'=>$a,':b'=>$b,':c' => $c,':d'=>$d,':e'=>$e));
-if($q){
-      header("location:add_teacher.php?success=true");
-        }else{
-            header("location:add_teacher.php?failed=true");
-} 
-
+    $sql = "INSERT INTO teacher (name,address,username,email,password) VALUES (:a,:b,:c ,:d,:e)";
+    $q = $db->prepare($sql);
+    $q->execute(array(':a'=>$a,':b'=>$b,':c' => $c,':d'=>$d,':e'=>$e));
+    if($q){
+          header("location:add_teacher.php?success=true");
+            }else{
+                header("location:add_teacher.php?failed=true");
+    } 
+  }
+  else
+  {
+    header("location:add_teacher.php?failed=true"); 
+  }
 ?>

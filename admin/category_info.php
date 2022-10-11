@@ -18,10 +18,7 @@ include 'header.php';
                 <a href="subject_detail.php">View details</a>
             </div>
 
-            <div class="box-cat">
-                <h2>Category Name: Syllabus</h2>
-                <a href="syllabus_detail.php">View details</a>
-            </div>
+
         </div>
 
     </section>

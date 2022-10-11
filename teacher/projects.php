@@ -26,6 +26,7 @@ include "header.php";
                         <th>Deadline</th>
                         <th>Title</th>
                         <th>View Project</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,12 +39,12 @@ include "header.php";
                 ?> 
 
                     <tr>
-                        <td><?php echo $row['semester'];?></td>
-                        <td><?php echo $row['s_name'];?></td>
+                        <td><?php echo $row['sem_id'];?></td>
+                        <td><?php echo $row['sub_id'];?></td>
                         <td><?php echo $row['deadline'];?></td>
                         <td><?php echo $row['title'];?></td>
-                        <td><a href="uploads/project/<?php echo $row['file'];?>"><i class="fa fa-eye" aria-hidden="true"></i>Model
-                            </a></td>
+                        <td><a href="uploads/project/<?php echo $row['file'];?>"><i class="fa fa-eye" aria-hidden="true"></i>Model </a></td>
+                        <td><a href="delete_project.php?id=<?=$row['id'] ?>">Delete</td>
                     </tr> <?php } ?>
 
                 </tbody>

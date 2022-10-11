@@ -17,7 +17,7 @@
                     for($i=0; $row = $result->fetch(); $i++){   
                         ?> 
                     <tr>
-                <li><?php echo $row['s_name'];?></li>
+                <li><?php echo $row['s_name'];?> <a href="delete_sem.php?id=<?php echo $row['id'];?>">delete</a></li>
             </tr>
                     <?php } ?>
                 </ul>

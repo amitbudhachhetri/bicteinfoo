@@ -30,13 +30,17 @@ if(!isset($_SESSION['SESS_ADMIN_NAME'])){
         </div>
         <div class="items">
             <ul>
-                <li class="active">
-                    <a href="index.php"><i class='fa fa-user'></i>Students</a>
+                <li class="">
+                    <a href="index.php"><i class='fa fa-user'></i>Dashboard</a>
                 </li>
+
                 <li>
                     <a href="teacher_info.php"><i class='fa fa-edit'></i>Teacher</a>
                 </li>
 
+                <li>
+                    <a href="syllabus_detail.php"><i class='fa fa-edit'></i>Syllabus</a>
+                </li>
                 <li>
                     <a href="category_info.php"><i class='fa fa-folder-open'></i>Category</a>
                 </li>
@@ -54,8 +58,8 @@ if(!isset($_SESSION['SESS_ADMIN_NAME'])){
     <section id="right-space">
         <div class="top-space">
 
-            <div class="search">
-                <i class='fa fa-search'></i> <input type="text">
+            <div class="">
+                <i class=''></i> 
             </div>
 
             <div class="user">
@@ -63,36 +67,5 @@ if(!isset($_SESSION['SESS_ADMIN_NAME'])){
             </div>
         </div>
 
-    <?php
-        $result = $db->prepare("SELECT count(*) as total FROM student");
-				$result->execute();
-				for($i=0; $row = $result->fetch(); $i++){
-
-
-               ?>
-
-        <div class="dash-basic">
-            <div class="dash-card">
-                <h2><?php echo $row['total']; ?> </h2>
-                    <?php }?>
-                <p>Students</p>
-            </div>
-
-            <?php
-        $result = $db->prepare("SELECT count(*) as total FROM teacher");
-				$result->execute();
-				for($i=0; $row = $result->fetch(); $i++){
-
-
-               ?>
-            <div class="dash-card">
-                <h2><?php echo $row['total']; ?> </h2>
-                <?php }?>
-                <p>Teachers</p>
-            </div>
-
-            <div class="dash-card">
-                <h2>3</h2>
-                <p>Categories</p>
-            </div>
+    
         </div>

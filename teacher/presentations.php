@@ -25,6 +25,7 @@ include "header.php";
                         <th>Subject</th>
                         <th>Topic</th>
                         <th>File</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,11 +36,11 @@ include "header.php";
                 ?> 
 
                     <tr>
-                        <td><?php echo $row['semester'];?></td>
-                        <td><?php echo $row['s_name'];?></td>
+                        <td><?php echo $row['sem_id'];?></td>
+                        <td><?php echo $row['sub_id'];?></td>
                         <td><?php echo $row['topic'];?></td>
-                        <td><a href="uploads/presentation/<?php echo $row['file'];?>"><i class="fa fa-eye" aria-hidden="true"></i>Model
-                            </a></td>
+                        <td><a href="uploads/presentation/<?php echo $row['file'];?>"><i class="fa fa-eye" aria-hidden="true"></i>Model</a></td>
+                        <td><a href="delete_presentation.php?id=<?=$row['id'] ?>">Delete</td>
                     </tr> <?php } ?>
                 </tbody>
             </table>

@@ -11,8 +11,12 @@
             </div>
             <?php if(get("success")):?>
                     <center><div style="margin-top:1em;">
-                        <?=App::message("success", "Added Successfully")?>
-                    </div></center>
+                            <?=App::message("success", "Added Successfully")?>
+                        </div></center>
+                        <?php elseif(get("failed")):?>
+                            <center><div style="margin-top:1em;">
+                        <?=App::message("failed", "sorry fill up all crendentials")?>
+                        </div></center>
                 <?php endif;?>
             <form action="save_subject.php" method="post">
                 <label for="">Subject Name</label>

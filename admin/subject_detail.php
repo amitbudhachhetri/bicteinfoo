@@ -23,7 +23,7 @@
                         <b>Subject Name:<?php echo $row['s_name'];?></b><br>
                         <b>Subject Code:<?php echo $row['s_code'];?></b><br>
                         <b>Credit Hours:<?php echo $row['s_c_hour'];?></b><br>
-                        <!-- <a href="edit_subject.php" class="">Edit</a> -->
+                        <a href="delete_sub.php?id=<?php echo $row['id'];?>" class="">delete</a>
                     </li>
                     <?php } ?>
                 </ul>

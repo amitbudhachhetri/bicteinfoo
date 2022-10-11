@@ -25,6 +25,7 @@ include "header.php";
                         <th>Sem</th>
                         <th>Subject</th>
                         <th>Link</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,9 +38,10 @@ include "header.php";
                 ?> 
 
                     <tr>
-                        <td><?php echo $row['n_link'];?></td>
-                        <td><?php echo $row['s_name'];?></td>
+                        <td><?php echo $row['sem_id'];?></td>
+                        <td><?php echo $row['sub_id'];?></td>
                         <td><a href="<?php echo $row['url'];?>">Get Notes</a></td>
+                        <td><a href="delete_notes.php?id=<?=$row['id'] ?>">Delete</td>
                          </a></td>
                     </tr> <?php } ?>
 
